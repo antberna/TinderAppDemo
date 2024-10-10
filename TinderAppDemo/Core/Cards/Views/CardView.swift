@@ -22,17 +22,21 @@ struct CardView: View {
         ZStack (alignment: .bottom){
             ZStack (alignment: .top){
                 Image(mockImages[currentImageIndex])
+                //Image(.jane3)
                     .resizable()
                     .scaledToFill()
                     .overlay {
                         ImageScrollingOverlay(currentImageIndex: $currentImageIndex, imageCount: mockImages.count)
                     }
                 
+                CardImageIndicatorView(currentImageIndex: currentImageIndex, imageCount: mockImages.count)
+                
                 SwipeActionIndicatorView(xOffset: $xOffset)
             }
             
             UserInfoView()
-                .padding(.horizontal)
+                //.padding(.horizontal)
+                .frame(width: SizeConstants.cardWidth)
         }
         .frame(width: SizeConstants.cardWidth, height: SizeConstants.cardHeight)
         .clipShape(RoundedRectangle(cornerRadius: 10))
