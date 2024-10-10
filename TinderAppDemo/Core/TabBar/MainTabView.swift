@@ -26,6 +26,8 @@ struct MainTabView: View {
                 .tabItem { Image(systemName: "person")}
                 .tag(3)
         }
+        // switch the color automatically if the user select darkmode
+        .tint(.primary)
     }
 }
 
