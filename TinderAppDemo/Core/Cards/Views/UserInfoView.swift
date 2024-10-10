@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserInfoViews: View {
+struct UserInfoView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack{
@@ -34,10 +34,14 @@ struct UserInfoViews: View {
                 .font(.subheadline)
                 .lineLimit(2)
         }
+        .foregroundStyle(.white)
         .padding()
+        .background(){
+            LinearGradient(colors: [.clear, .black], startPoint: .top, endPoint: .bottom)
+        }
     }
 }
 
 #Preview {
-    UserInfoViews()
+    UserInfoView()
 }
