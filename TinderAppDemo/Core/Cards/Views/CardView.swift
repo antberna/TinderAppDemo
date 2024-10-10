@@ -10,7 +10,7 @@ import SwiftUI
 struct CardView: View {
 
     var body: some View {
-        ZStack {
+        ZStack (alignment: .bottom){
             Image(.jane1)
                 .resizable()
                 .scaledToFill()
