@@ -16,10 +16,10 @@ struct CardStackView: View {
                 CardView(viewModel: viewModel, model: card)
             }
         }
-        .onChange(of: viewModel.cardModels) { oldValue, newValue in
-            print("DEBUG: old value count is \(oldValue.count)")
-            print("DEBUG: new value count is \(newValue.count)")
-        }
+        //        .onChange(of: viewModel.cardModels) { oldValue, newValue in
+        //            print("DEBUG: old value count is \(oldValue.count)")
+        //            print("DEBUG: new value count is \(newValue.count)")
+        //}
     }
 }
 
